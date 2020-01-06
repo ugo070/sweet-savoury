@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer>
-      <span>&copy; Copyright 2019 S & S CateringHub</span>
+      <span>&copy; Copyright 2020 S & S CateringHub</span>
     </footer>
   );
 }

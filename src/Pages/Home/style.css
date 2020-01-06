@@ -8,9 +8,110 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .Row {
   display: flex;
   justify-content: center;
+}
+.crossfade {
+  position: relative;
+  height: 500px;
+}
+.crossfade > figure {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 0;
+}
+.crossfade > figure:nth-child(1) {
+  animation-delay: 6s;
+  background-image: url("../images/homepage.jpg");
+}
+.crossfade > figure:nth-child(2) {
+  animation-delay: 12s;
+  background-image: url("../images/homepage2.jpg");
+}
+
+.crossfade > figure:nth-child(3) {
+  animation-delay: 18s;
+  background-image: url("../images/s&s1.jpg");
+}
+.crossfade > figure:nth-child(4) {
+  animation-delay: 24s;
+  background-image: url("../images/s&s2.jpg");
+}
+
+.crossfade > figure:nth-child(5) {
+  animation-delay: 30s;
+  background-image: url("../images/s&s3.jpg");
+}
+.crossfade > figure:nth-child(6) {
+  animation-delay: 36s;
+  background-image: url("../images/s&s4.jpg");
+}
+.crossfade > figure:nth-child(7) {
+  animation-delay: 42s;
+  background-image: url("../images/s&s5.jpg");
+}
+.crossfade > figure:nth-child(8) {
+  animation-delay: 48s;
+  background-image: url("../images/s&s6.jpg");
+}
+.crossfade > figure:nth-child(9) {
+  animation-delay: 54s;
+  background-image: url("../images/s&s7.jpg");
+}
+
+.crossfade > figure:nth-child(10) {
+  animation-delay: 60s;
+  background-image: url("../images/s&s8.jpg");
+}
+.crossfade > figure:nth-child(11) {
+  animation-delay: 66s;
+  background-image: url("../images/s&s9.jpg");
+}
+.crossfade > figure:nth-child(12) {
+  animation-delay: 72s;
+  background-image: url("../images/s&s10.jpg");
+}
+.crossfade > figure:nth-child(13) {
+  animation-delay: 78s;
+  background-image: url("../images/s&s11.jpg");
+}
+.crossfade > figure:nth-child(14) {
+  animation-delay: 84s;
+  background-image: url("../images/s&s12.jpg");
+}
+.crossfade > figure:nth-child(15) {
+  animation-delay: 90s;
+  background-image: url("../images/s&s13.jpg");
+}
+@keyframes imageAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  8% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

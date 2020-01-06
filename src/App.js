@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import logo from "./Pages/images/logo.svg.jpg";
+// import logo from "./Pages/images/logo.svg.jpg";
 import "./App.css";
 import "./index.css";
 import Home from "./Pages/Home";
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/createstore" component={Createstore} />
+          {/* <Route exact path="/createstore" component={Createstore} /> */}
           <Route path="/contact" component={Contact} />
           <Route exact path="/search" component={Search} />
         </Wrapper>
