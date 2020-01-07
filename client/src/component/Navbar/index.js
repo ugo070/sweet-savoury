@@ -7,9 +7,11 @@ function Navbar() {
   return (
     <nav className="navbar navbar-default navbar-expand-lg navbar-light">
       <div className="navbar-header d-flex col">
-        <a className="navbar-brand" href="#">
-          S & S FoodHub
-        </a>
+        <Link className="navbar-brand"></Link>{" "}
+        <Link to="foodhub">
+          <strong>S & S FoodHub</strong>
+        </Link>
+        ,
         <button
           type="button"
           data-target="#navbarCollapse"
@@ -29,14 +31,14 @@ function Navbar() {
       >
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/" className="nav-link">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/about" className="nav-link">
               About
-            </a>
+            </Link>
           </li>
           <li className="nav-item dropdown">
             <a
@@ -48,41 +50,41 @@ function Navbar() {
             </a>
             <ul className="dropdown-menu">
               <li>
-                <a href="#" className="dropdown-item">
+                <Link to="/caterers" className="dropdown-item">
                   Caterers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="dropdown-item">
+                <Link to="/chefs" className="dropdown-item">
                   Chefs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="dropdown-item">
+                <Link to="/nutrionists" className="dropdown-item">
                   Nutrionists
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="dropdown-item">
+                <Link to="/foodies" className="dropdown-item">
                   Foodies
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="nav-item active">
-            <a href="#" className="nav-link">
-              Pricing
-            </a>
+            <Link to="/createstore" className="nav-link">
+              Create Store
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/blog</li>" className="nav-link">
               Blog
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/contact" className="nav-link">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         <form className="navbar-form form-inline">
@@ -100,13 +102,11 @@ function Navbar() {
         </form>
         <ul className="nav navbar-nav navbar-right ml-auto">
           <li className="nav-item">
-            <a
-              data-toggle="dropdown"
-              className="nav-link dropdown-toggle"
-              href="#"
-            >
-              Login
-            </a>
+            <Link data-toggle="dropdown">
+              <Link to="login" className="nav-link dropdown-toggle">
+                Login
+              </Link>
+            </Link>
             <ul className="dropdown-menu form-wrapper">
               <li>
                 <form action="/examples/actions/confirmation.php" method="post">

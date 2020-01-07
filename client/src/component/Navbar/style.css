@@ -1,0 +1,15 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+
+.nav-item1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: unset;
+  padding: 16px;
+}

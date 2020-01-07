@@ -37,16 +37,16 @@ function Home() {
       </Hero> */}
 
       <Container className="container ">
-        <h3>First Premier Online Food CateringHub</h3>
+        <h3>I'm Sweet & I'm Savory !</h3>
         <Row className="Row">
           <Col size="md-12">
-            <h5> I'm Sweet & I'm Savory !</h5>
+            <h5> First Premier Online Food CateringHub</h5>
           </Col>
         </Row>
         <Row className="Row">
           <Col className="Col" size="md-12">
             <p>
-              Sweet & Savory Food CateringHub is an online free eCommerce
+              Sweet & Savory Food CateringHub is a free online eCommerce
               Catering platform for private and commericail services.Small and
               medium food vendors register their product and services on the hub
               to render services to their clients.
