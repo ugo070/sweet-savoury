@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Technologies used
 
 In the project directory, you can run:
-MERN STACK Application was used to build this CRUD (Create, Read, Update, and Delete) S&S application.
+MERN STACK Application was used to build this CRUD (Create, Read, Update, and Delete) S&S catering Hub application.
 
 Mern stack consist of :
 Node.js: Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js brings JavaScript to the server
