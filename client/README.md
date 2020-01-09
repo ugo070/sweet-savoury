@@ -1,8 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Technologies used 
-
-
+## Technologies used
 
 In the project directory, you can run:
 MERN STACK Application was used to build this CRUD (Create, Read, Update, and Delete) S&S application.
