@@ -1,8 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Technologies used 
+
+
 
 In the project directory, you can run:
+MERN STACK Application was used to build this CRUD (Create, Read, Update, and Delete) S&S application.
+
+Mern stack consist of :
+Node.js: Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js brings JavaScript to the server
+MongoDB: A document-based open source database
+Express: A Fast, unopinionated, minimalist web framework for Node.js
+React: A JavaScript front-end library for building user interface
 
 ### `npm start`
 

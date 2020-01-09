@@ -55,7 +55,7 @@ export default class Createstore extends Component {
     };
 
     axios
-      .post("http://localhost:4000/caterers/add", newCaterers)
+      .post("http://localhost:3001/caterers/add", newCaterers)
       .then(res => console.log(res.data));
 
     this.setState({
