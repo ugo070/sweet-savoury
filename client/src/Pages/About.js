@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div>
-      <h1>About</h1>
+      <h1>Welcome to Sweet and Savory</h1>
 
       <p>
         Sweet & Savory HUB is online free eCommerce platform for food catering

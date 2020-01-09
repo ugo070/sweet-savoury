@@ -1,92 +1,142 @@
-// import React, { Component } from "react";
-// import API from "../utils/Apis.js";
-// import Card from "../component/Card";
-// import Alert from "../component/Alert";
+import React, { Component } from "react";
+import axios from "axios";
 
-// className Createstore extends Component {
-//   state = {
-//     image: "",
-//     match: false,
-//     matchCount: 0
-//   };
+export default class Createstore extends Component {
+  constructor(props) {
+    super(props);
 
-//   // When the component mounts,
-//   componentDidMount() {
-//     this.loadCaterer();
-//   }
+    this.onChangeCaterersDescription = this.onChangeCaterersDescription.bind(
+      this
+    );
+    this.onChangeCaterersResponsible = this.onChangeCaterersResponsible.bind(
+      this
+    );
+    this.onChangeCaterersPriority = this.onChangeCaterersPriority.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 
-//   handleBtnClick = event => {
-//     // Get the data-value of the clicked button
-//     const btnType = event.target.attributes.getNamedItem("data-value").value;
-//     // Clone this.state to the newState object
-//     // We'll modify this object and use it to set our component's state
-//     const newState = { ...this.state };
+    this.state = {
+      caterers_description: "",
+      caterers_responsible: "",
+      caterers_priority: "",
+      caterers_completed: false
+    };
+  }
+  onChangeCaterersDescription(e) {
+    this.setState({
+      todo_description: e.target.value
+    });
+  }
 
-//     if (btnType === "pick") {
-//       // Set newState.match to either true or false depending on match
-//       newState.match = 1 === Math.floor(Math.random() * 5) + 1;
+  onChangeCaterersResponsible(e) {
+    this.setState({
+      caterers_responsible: e.target.value
+    });
+  }
 
-//       // Set newState.matchCount equal to its current value or its current value + 1
-//       newState.matchCount = newState.match
-//         ? newState.matchCount + 1
-//         : newState.matchCount;
-//     } else {
-//       newState.match = false;
-//     }
+  onChangeCaterersPriority(e) {
+    this.setState({
+      caterers_priority: e.target.value
+    });
+  }
 
-//     this.setState(newState);
-//     this.loadNextCaterer();
-//   };
+  onSubmit(e) {
+    e.preventDefault();
 
-//   loadNextCaterer = () => {
-//     API.getRandomCaterer()
-//       .then(res =>
-//         this.setState({
-//           image: res.data.message
-//         })
-//       )
-//       .catch(err => console.log(err));
-//   };
+    console.log(`Form submitted:`);
+    console.log(`Caterers Description: ${this.state.caterers_description}`);
+    console.log(`Caterers Responsible: ${this.state.caterers_responsible}`);
+    console.log(`Caterers Priority: ${this.state.caterers_priority}`);
 
-//   render() {
-//     return (
-//       <div>
-//         <h1 className="text-center">Food Category</h1>
-//         <h3 className="text-center">Thumbs up on any category you like!</h3>
-//         {/* <Card image={this.state.image} handleBtnClick={this.handleBtnClick} /> */}
-//         <h1 className="text-center">
-//           Food Category {this.state.matchCount} Foodie!
-//         </h1>
-//         {/* <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
-//           Yay! That Caterer Liked You Too!!!
-//         </Alert> */}
-//       </div>
-//       <form action="action_page.php">
-//       <div class="container">
-//         <h1>Register</h1>
-//         <p>Please fill in this form to create an account.</p>
-//         <hr>
+    const newCaterers = {
+      caterers_description: this.state.caterers_description,
+      caterers_responsible: this.state.caterers_responsible,
+      caterers_priority: this.state.caterers_priority,
+      caterers_completed: this.state.todo_completed
+    };
 
-//         <label for="email"><b>Email</b></label>
-//         <input type="text" placeholder="Enter Email" name="email" required>
+    axios
+      .post("http://localhost:4000/caterers/add", newCaterers)
+      .then(res => console.log(res.data));
 
-//         <label for="psw"><b>Password</b></label>
-//         <input type="password" placeholder="Enter Password" name="psw" required>
+    this.setState({
+      caterers_description: "",
+      catererss_responsible: "",
+      caterers_priority: "",
+      caterers_completed: false
+    });
+  }
 
-//         <label for="psw-repeat"><b>Repeat Password</b></label>
-//         <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-//         <hr>
+  render() {
+    return (
+      <div style={{ marginTop: 10 }}>
+        <h3>Createtore</h3>
+        <form onSubmit={this.onSubmit}>
+          <div className="form-group">
+            <label>Description: </label>
+            <input
+              type="text"
+              className="form-control"
+              value={this.state.caterers_description}
+              onChange={this.onChangeCaterersDescription}
+            />
+          </div>
+          <div className="form-group">
+            <label>Responsible: </label>
+            <input
+              type="text"
+              className="form-control"
+              value={this.state.caterers_responsible}
+              onChange={this.onChangeCaterersResponsible}
+            />
+          </div>
+          <div className="form-group">
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="priorityOptions"
+                id="priorityLow"
+                value="Low"
+                checked={this.state.caterers_priority === "Low"}
+                onChange={this.onChangeCaterersPriority}
+              />
+              <label className="form-check-label">Low</label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="priorityOptions"
+                id="priorityMedium"
+                value="Medium"
+                checked={this.state.caterers_priority === "Medium"}
+                onChange={this.onChangeCaterersPriority}
+              />
+              <label className="form-check-label">Medium</label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="priorityOptions"
+                id="priorityHigh"
+                value="High"
+                checked={this.state.caterers_priority === "High"}
+                onChange={this.onChangeCaterersPriority}
+              />
+              <label className="form-check-label">High</label>
+            </div>
+          </div>
 
-//         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-//         <button type="submit" class="registerbtn">Register</button>
-//       </div>
-
-//       <div class="container signin">
-//         <p>Already have an account? <a href="#">Sign in</a>.</p>
-//       </div>
-//     </form>
-//     );
-//   }
-// }
-
-// export default Createstore;
+          <div className="form-group">
+            <input
+              type="submit"
+              value="Create Caterers"
+              className="btn btn-primary"
+            />
+          </div>
+        </form>
+      </div>
+    );
+  }
+}

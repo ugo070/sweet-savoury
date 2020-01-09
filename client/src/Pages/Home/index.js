@@ -37,10 +37,10 @@ function Home() {
       </Hero> */}
 
       <Container className="container ">
-        <h3>I'm Sweet & I'm Savory !</h3>
+        <h1>I'm Sweet & I'm Savory !</h1>
         <Row className="Row">
           <Col size="md-12">
-            <h5> First Premier Online Food CateringHub</h5>
+            <h2> First Premier Online Food CateringHub</h2>
           </Col>
         </Row>
         <Row className="Row">

@@ -17,14 +17,14 @@ function Contact(props) {
           type="text"
           id="lname"
           name="lastname"
-          placeholder="Your last name.."
+          placeholder="last name.."
         />
         <label for="lname">Email</label>
         <input
           type="text"
           id="email"
           name="example@gmail.com"
-          placeholder="Your Email"
+          placeholder=" Email"
         />
         <label for="country">Country</label>
         <select id="country" name="country">
@@ -37,7 +37,7 @@ function Contact(props) {
         <textarea
           id="subject"
           name="subject"
-          placeholder="Write something.."
+          placeholder="Write here.."
           style={{ height: "200px" }}
         ></textarea>
 

@@ -1,15 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Depending on the current path, this component sets the "active" className on the appropriate navigation link item
 function Navbar() {
   return (
+    // <div className="container">
     <nav className="navbar navbar-default navbar-expand-lg navbar-light">
       <div className="navbar-header d-flex col">
         <Link className="navbar-brand"></Link>{" "}
         <Link to="foodhub">
-          <strong>S & S FoodHub</strong>
+          <h2>
+            <strong>Sweet&SavoryHUB</strong>
+          </h2>
         </Link>
         ,
         <button
@@ -32,12 +36,12 @@ function Navbar() {
         <ul className="nav navbar-nav">
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Home
+              <strong>Home</strong>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/about" className="nav-link">
-              About
+              <strong>about</strong>
             </Link>
           </li>
           <li className="nav-item dropdown">
@@ -46,7 +50,7 @@ function Navbar() {
               className="nav-link dropdown-toggle"
               href="#"
             >
-              Services <b className="caret"></b>
+              <strong>Services</strong> <b className="caret"></b>
             </a>
             <ul className="dropdown-menu">
               <li>
@@ -73,17 +77,17 @@ function Navbar() {
           </li>
           <li className="nav-item active">
             <Link to="/createstore" className="nav-link">
-              Create Store
+              <strong>Createstore</strong>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/blog</li>" className="nav-link">
-              Blog
+              <strong>Blog</strong>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/contact" className="nav-link">
-              Contact
+              <strong>Contact</strong>
             </Link>
           </li>
         </ul>
@@ -104,7 +108,7 @@ function Navbar() {
           <li className="nav-item">
             <Link data-toggle="dropdown">
               <Link to="login" className="nav-link dropdown-toggle">
-                Login
+                <strong>Login</strong>
               </Link>
             </Link>
             <ul className="dropdown-menu form-wrapper">
@@ -208,6 +212,7 @@ function Navbar() {
         </ul>
       </div>
     </nav>
+    // </div>
   );
 }
 
