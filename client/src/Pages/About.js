@@ -2,11 +2,11 @@ import React from "react";
 
 function About() {
   return (
-    <div>
-      <h1>Welcome to Sweet and Savory</h1>
+    <div class="container-about">
+      <h2>Welcome to Sweet and Savory</h2>
 
       <p>
-        Sweet & Savory HUB is online free eCommerce platform for food catering
+        Sweet & Savory HUB is a free online eCommerce platform for food catering
         services for commercial and private services. Small and medium food
         vendors register their product and services on the hub to render
         services to their clients. The website offers some custom designs and

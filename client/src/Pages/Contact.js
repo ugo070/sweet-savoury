@@ -3,21 +3,16 @@ import { Link, Route } from "react-router-dom";
 
 function Contact(props) {
   return (
-    <div class="container">
+    <div class="container-contact">
       <form action="action_page.php">
         <label for="fname">First Name</label>
-        <input
-          type="text"
-          id="fname"
-          name="firstname"
-          placeholder="Your name.."
-        />
+        <input type="text" id="fname" name="firstname" placeholder="name.." />
         <label for="lname">Last Name</label>
         <input
           type="text"
           id="lname"
           name="lastname"
-          placeholder="last name.."
+          placeholder="last Name."
         />
         <label for="lname">Email</label>
         <input

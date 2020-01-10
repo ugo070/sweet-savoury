@@ -69,7 +69,7 @@ export default class Createstore extends Component {
   render() {
     return (
       <div style={{ marginTop: 10 }}>
-        <h3>Createtore</h3>
+        <h3>Create Store</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Description: </label>

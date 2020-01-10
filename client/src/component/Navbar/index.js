@@ -11,9 +11,9 @@ function Navbar() {
       <div className="navbar-header d-flex col">
         <Link className="navbar-brand"></Link>{" "}
         <Link to="foodhub">
-          <h2>
-            <strong>Sweet&SavoryHUB</strong>
-          </h2>
+          <h3>
+            <strong>S&S CateringHUB</strong>
+          </h3>
         </Link>
         ,
         <button
@@ -41,7 +41,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link to="/about" className="nav-link">
-              <strong>about</strong>
+              <strong>About</strong>
             </Link>
           </li>
           <li className="nav-item dropdown">
