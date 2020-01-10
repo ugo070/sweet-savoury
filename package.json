@@ -1,8 +1,9 @@
 {
-  "name": "react",
+  "name": "react-Demoy",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "homepage": "https://ugo070.github.io/sweet-savoury/",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -11,7 +12,8 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Ugo Anazodo",
   "license": "ISC",
@@ -29,7 +31,6 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.0",
     "mongoose": "^5.4.19",
-    "react-router-dom": "4.3.1",
-    "swiper": "^5.2.1"
+    "react-router-dom": "4.3.1"
   }
 }
