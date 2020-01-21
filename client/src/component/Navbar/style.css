@@ -13,3 +13,16 @@ nav.navbar.navbar-default {
   left: unset;
   padding: 16px;
 }
+#logo {
+  float: left;
+  width: 250px;
+  height: 90px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background: blue;
+}
